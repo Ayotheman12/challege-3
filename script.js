@@ -11,6 +11,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password =[];
   var passwordText = document.querySelector("#password");
+
+  var numbersCharacters = prompt("how many characters do you want");
    var lowerCharacters = confirm("do you want lowerCaseCharaters");
    var upperCharacters = confirm("do you want upperCharaters");
    var specialCharacters = confirm("do you want specialCharaters");
@@ -51,7 +53,8 @@ if (numbers ) {
 else{
 password = password ;
 }
-
+password = password.sort(() => 0.5 - Math.random());
+password = password.slice(0,numbersCharacters);
 
 password = password.join('');
 
